@@ -1,0 +1,141 @@
+# Data Types in Java=>
+    - Java Primitive Data Types=>
+        - boolean data type
+        - byte data type
+        - char data type
+        - short data type
+        - int data type
+        - long data type
+        - float data type
+        - double data type
+
+    - Java non-primitive datatypes=>
+        - Array
+        - Objects
+        - Strings
+
+
+# Unicode system in java=> ASCII    (Miscellaneous)
+    -
+
+
+# Some important keywords in java
+    - Static
+    - final
+    - super
+    - this
+
+# Types of object references in java
+    - Strong => Object obj=new Object();
+            - Default way. Mostly used
+    - Weak   => WeakReference<ObjectName> wr = new WeakReference<>(new ObjectName());
+            - Used where you want object collectible when memory needed such as cache.
+    - Soft   => SoftReference<ObjectName> sr = new SoftReference<>(new ObjectName());
+            - Only collected when jvm needs space
+    - Phantom => ReferenceQueue<MemoryDemo> queue = new ReferenceQueue<>();
+                 PhantomReference<MemoryDemo> phantomDemo = new PhantomReference<>(new MemoryDemo(), queue);
+            - They allow object tracking, when object is ready to remove.Typically used for
+            cleanup activity(Ex. Resource allocated....Resource finalized....Resource is ready for cleanup.)
+
+# Strings =>
+    - Ways to create strings=>
+        - String literal way =>
+            - String str="Rahul";
+            - When you create a String using a literal, like String str1 = "Hello";, Java checks if "Hello" is already in the string pool.
+              If "Hello" exists in the pool, str1 will reference that existing object. If it doesn’t, Java will create a new "Hello" object in the pool and point str1 to it.
+        - Using new keyword => String str=new String("Rahul");
+            - When you create a String with new, Java always creates a new String object in the heap memory, even if an equivalent string already exists in the string pool.
+              This means str2 will not point to the pool's "Hello" object but to a separate instance in the heap.
+        - StringBuilder =>
+
+
+
+    - Intern method: If you want to add a String created with new to the pool, you can use the .intern() method:
+        String str4 = new String("Hello").intern();  // Adds "Hello" to the pool, or returns the existing pool object
+        System.out.println(str1 == str4);
+
+
+    - Methods in string
+        - length()=> Returns length of string
+        - charAt(index)=> Returns char at index
+        - subString(int beginIndex,EndIndex)=> returns substring from index to index end
+        - trim()= Removes leading and trailing whitespace
+        - contains(CharSequence sqe)=> Checks if string contains sequence or not
+        - equals(obj)=> Checks if content of 2 string is same or not including cases
+        - toUpperCase()=> Converts to uppercase
+        - replace(char oldchar, char newChar)=> replaces all matching oldChar with newChar
+        - split(String deliminator)=> Splits string into array based on deliminator
+        - indexOf(String str)=> Finds first occurrence of str else -1 if not found
+        - join(CharSequence delimiter,charSequence elements,...)=> Joins Multiple strings with special delimiter
+        - toCharArray()=> Converts string into char array
+        - valueOf(Object obj)=> Converts obj into string(static Method)
+        - intern()=> Ensures that string is added to string pool
+        - repeat(int count)=> Repeat string given number of time
+        - transform(function<String,R>func)=> Applies func to string returns result. ex.String result = "hello".transform(s -> s.toUpperCase())
+
+# Array Basics =>
+    - Collection of fixed sized  Similar data type=> Array is object in java => Default initialized null
+    - Syntax=> type[] arr=new type[size]; type[] arr={,,,};
+    - In the case of primitive data types, the actual values might be stored in contiguous memory locations (JVM does not guarantee this behavior). In the case of class objects, the actual objects are stored in a heap segment.
+    - Type of array: - Single Dimensional Array => int[]arr={1,2,3}
+                     - Multidimensional Array   => int[row][col]arr={{1,2},{3,4}};
+                     - Jagged Array             => int[2][]arr={{1,2},{3,4,5}};
+    - Declaration, Instantiation and Initialization of Java Array=> int a[]={33,3,4,5};
+    - Passing Array to a Method in Java=> void min(int[] arr)
+    - Anonymous array=> printArray(new int[]{10,22,44,66})
+    - Returning array from method=> static int[] get(){  return new int[]{10,30,50,90,60};  }
+    - length=> arr.length=> Property of array gives total number of element in array
+    - Copying Java Array=> We can copy an array to another by arraycopy()=> int[] copy = Arrays.copyOf(arr, arr.length);
+    - Cloning Array => Way1: int [] clonedArr=arr.clone();
+                       Way2: System.arraycopy(arr, 0, copyArr, 0, arr.length);
+
+    - Converting to String=> toString method => Arrays.toString(arr)
+    - Filling array=> Arrays.fill(target,42); Fills all target array with default value of 42
+    - Sorting Array=> Arrays.sort(arr)
+    - Searching: int index=Arrays.binarySearch(arr,target)  Gives index of target element if found in arr
+    - Array of object=>
+        //Student object
+        Student{String name,String rollno Student(name,rollno){this .rollno=rollno;this.name=name}};
+        Student[]arr=new Student[size];
+
+    - Array traversing=> - for loop for(int i=;i<arr.length;i++){//code }
+                         - forEach  for(int num: arr){//code }
+
+# Enum=>
+    - Enums are a special type of class that represents a collection of constants. should be used when you need to represent a fixed set of related, predefined values in a type-safe and meaningful way.
+    - Enum constants are implicitly public, static, and final.
+    - You can add fields, methods, and constructors inside an enum.
+
+    - Enum Methods:
+           - values()=>  Returns an array of all the constants of the enum type, in the order they are declared.
+           - valueOf(String name)=> Returns enum const with specified name.
+           - ordinal()=> Returns position of const in its enum declaration.
+
+    - Use cases=> - Representing Fixed, Predefined Constants
+                  - Replacing Constant Integers or Strings to achieve more readability
+                  - Implementing Role-Based Access Control
+                  - Representing states
+                  - Defining Constants with Associated Values ex.Ok(200,"Sucess")
+                  - Representing Configuration or Settings
+                  - Lookup tables ex.CountryCode can use constructor to set value and get country with code using getter.
+                  - Enforcing Compile-Time Safety
+
+# Generics
+
+# OOP's
+
+# Exception Handling
+
+# Collections
+
+# Java8+
+
+# Date and Math Objects
+
+# File Handling
+
+# Multithreading
+
+# Synchronisation and concurrency
+
+# ReflectionApi
