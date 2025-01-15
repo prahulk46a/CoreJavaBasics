@@ -3,7 +3,7 @@ package miscellaneous.Enum;
 //import static miscellaneous.Enum.Day.Saturday;
 //import static miscellaneous.Enum.Day.Sunday;
 
-public class EnumExample {
+public class Main {
 //    public  static void setAlarm(){
 //        Day today = Day.Wednesday;
 //

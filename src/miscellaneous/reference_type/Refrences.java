@@ -2,7 +2,7 @@ package miscellaneous.reference_type;
 
 import java.lang.ref.WeakReference;
 
-public class Refrences {
+public class  Refrences {
 
     public static void main(String[] args) {
         //Strong Reference

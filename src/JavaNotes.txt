@@ -14,6 +14,33 @@
         - Objects
         - Strings
 
+#typecasting=>          -->   hierarchy    -->          -->
+    - Primitives=>  byte < short < int < long < float < double.
+        - Auto widening=> - Converting small sized primitive datatype to big sized datatype.
+                          - No loss of data occurs, hence implicitly java does if needed
+                          - ex. int a=20; long b=a;
+
+        - Explicit Narrowing=> - Converting large sized primitive datatype to small sized datatype.
+                               - Loss of data occurs, hence user need to mention explicitly.
+                               - ex. double a= 10.5 ; int b=(int) a //loss of 0.5
+
+    - Non primitives=>      ex. dog < Animal < Living Being < objects
+        - Auto up-casting=> - Change the type of object from subclass type to super class type. (dog to Animal)
+                            - No need to explicitly mention typecasting as already dog class has access of all methods of animal class hence no loss.
+                            - Ex. Animal animal = new Dog();
+                            - From above with reference of animal we can access all methods present in Animal class but methods that are not overridden by dog class i.e dog class itself method will not accesible by this animal ref.
+                            - In short methods that are present in both animal can be accessible. If both animal and dog has eat method then body will be executed for dog class by animal class ref i.e hierarchy will be followed as it is.
+                            - Why needed? => - This behavior ensures that the code is type-safe and adheres to the principle of programming to an interface (or a base class), which is one of the cornerstones of polymorphism in object-oriented programming.
+                                             - To achieve dependency injection EX. private final Animal animal; public AnimalService(Animal animal) { this.animal = animal;}
+
+        - Down-casting =>   - Converting a reference of a superclass type into a reference of a subclass type.
+                            - It allows you to access subclass-specific methods and properties that are not available in the superclass
+                            - Downcasting must be done explicitly using the cast operator ((SubClass)), as it is not implicitly allowed by Java.
+                            - The actual object being referenced must be an instance of the subclass you are casting to. Otherwise, a ClassCastException is thrown.i.e if we want to cast Animal animal = new Cat. to Dog dog= new (dog)animal; will give error
+                            - Downcasting is used when:
+                                - You need to access methods or fields specific to the subclass.
+                                - You are dealing with a superclass reference but are certain it points to an object of a subclass.
+
 
 # Unicode system in java=> ASCII    (Miscellaneous)
     -
