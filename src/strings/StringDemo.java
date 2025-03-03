@@ -17,7 +17,7 @@ public class StringDemo {
 
         System.out.println(str1.length()); //11
         System.out.println(str1.charAt(0)); //H
-        System.out.println(str1.substring(0, 5)); // Hello => exclusive endindex
+        System.out.println(str1.substring(0, 5)); // Hello => exclusive end index
         System.out.println(str1.toUpperCase() );  // HELLO WORLD returns new string with all uppercases. will not modify original one
         System.out.println(str1.toLowerCase());   // hello world
 
