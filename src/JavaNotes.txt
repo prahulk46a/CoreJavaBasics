@@ -167,6 +167,10 @@
 # Generics
 
 # OOP's
+    - Encapsulation=> 1. Need=> Data hiding, improves security, and ensures controlled access and validations, Better maintainability, loose coupling
+                      2. Getters → Used to read private variables.
+                      3. Setters → Used to modify private variables (with validation).
+                      4. Encapsulation → Protects data and ensures controlled access.
 
 # Exception Handling
 
