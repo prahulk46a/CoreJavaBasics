@@ -20,6 +20,8 @@ public class InheritanceChild extends InheritanceBase{
         this.examName = examName;
     }
 
+    //Can directly access fields without getters and setters as variables are protected
+
     @Override
     public String toString() {
         return "InheritanceChild{" +

@@ -167,14 +167,25 @@
 # Generics
 
 # OOP's
-    - Encapsulation=> 1. Need=> Data hiding, improves security, and ensures controlled access and validations, Better maintainability, loose coupling
-                      2. Getters → Used to read private variables.
-                      3. Setters → Used to modify private variables (with validation).
-                      4. Encapsulation → Protects data and ensures controlled access.
+    - Encapsulation => 1. Need=> Data hiding, improves security, and ensures controlled access and validations, Better maintainability, loose coupling
+                       2. Getters → Used to read private variables.
+                       3. Setters → Used to modify private variables (with validation).
+                       4. Encapsulation → Protects data and ensures controlled access.
+                       5. Reflection can bypass encapsulation → Use security best practices.
+
+    - Abstraction =>  Hiding implementation details and exposing only necessary functionalities.
+    - Inheritance =>
+    - Polymorphism =>
+
+# Collections=> Architecture for storing and manipulating a group of objects
+    - java.util package contains all the classes and interfaces for the Collection framework.
+    - key interfaces- Collection, List, Set, Queue, and Map
+    - Collection interface=>
+
 
 # Exception Handling
 
-# Collections
+
 
 # Java8+
 

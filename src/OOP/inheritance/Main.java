@@ -11,7 +11,7 @@ public class Main {
         obj.setName("Rahul");
         obj.setAddress("Pune");
         obj.setPhoneNumber("7709605253");
-        obj.setDob(new Date(2002,02,07)); //date 0=>jan  based indexing
+        obj.setDob(new Date(2002,02,07)); //date 0 =>jan  based indexing
         obj.setExamName("10th Boards");
         obj.setExamSeatNumber("D19007135");
 
