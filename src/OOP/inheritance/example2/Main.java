@@ -1,4 +1,5 @@
-package OOP.inheritance;
+package OOP.inheritance.example2;
+
 import java.util.Date;
 
 

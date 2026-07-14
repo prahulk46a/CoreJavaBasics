@@ -1,6 +1,6 @@
-package OOP.inheritance;
+package OOP.inheritance.example2;
 
-public class InheritanceChild extends InheritanceBase{
+public class InheritanceChild extends InheritanceBase {
     String examSeatNumber;
     String examName;
 
