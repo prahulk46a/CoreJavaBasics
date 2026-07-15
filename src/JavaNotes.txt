@@ -165,6 +165,14 @@
                   - Enforcing Compile-Time Safety
 
 # Generics
+    - Parameterized types that allow writing code which works with multiple data types using a single class, interface, or method.
+    - They improve reusability and ensure type safety at compile time.
+    - Benefits of Generics:
+        - Type Safety: Ensures that you can only use the specified type, preventing ClassCastException at runtime.
+        - Code Reusability: You can write a single class or method that works with different data types.
+        - Compile-Time Checking: Errors related to type mismatches are caught at compile time rather than at runtime.
+    - Example: class Box<T> { private T content; public void setContent(T content) { this.content = content; } public T getContent() { return content; } }
+    - Usecases: Custom Collections, Data repositories, Response wrapper(API responses), Pagination, Optionals, caching, Message Queues, Payment processors.
 
 # OOP's
     - Encapsulation => 1. Need=> Data hiding, improves security, and ensures controlled access and validations, Better maintainability, loose coupling
@@ -174,12 +182,31 @@
                        5. Reflection can bypass encapsulation → Use security best practices.
 
     - Abstraction =>  Hiding implementation details and exposing only necessary functionalities.
-    - Inheritance =>
-    - Polymorphism =>
+        Benefits of Abstraction:
+        1. Encapsulation of implementation details.
+        2. Code reusability through inheritance and interface implementation.
+        3. Flexibility in designing and extending classes.
+        4. Modularity and easier maintenance of code.
+        5. Promotion of loose coupling between components.
+
+    - Inheritance =>  Allows a class to acquire the properties and methods of another class.
+        - Types of Inheritance:
+            1. Single Inheritance: A class inherits from one superclass.
+            2. Multilevel Inheritance: A class inherits from a superclass, which in turn inherits from another superclass.
+            3. Hierarchical Inheritance: Multiple classes inherit from a single superclass.
+            4. Hybrid Inheritance: A combination of two or more types of inheritance (not directly supported in Java due to the diamond problem).
+        - Benefits of Inheritance:
+            1. Code Reusability: Inherited methods and properties can be reused in subclasses.
+            2. Method Overriding: Subclasses can provide specific implementations for inherited methods.
+            3. Polymorphism: Enables objects to be treated as instances of their parent class, allowing for dynamic method invocation.
+            4. Extensibility: New functionality can be added to existing classes without modifying them.
+    - Polymorphism =>  The ability of an object to take many forms.
+        - Compile-Time Polymorphism (Method Overloading): Achieved by defining multiple methods with the same name but different parameter lists within the same class.
+        - Runtime Polymorphism (Method Overriding): Achieved when a subclass provides a specific implementation of a method that is already defined in its superclass. The method to be executed is determined at runtime based on the actual object type.
 
 # Collections=> Architecture for storing and manipulating a group of objects
     - java.util package contains all the classes and interfaces for the Collection framework.
-    - key interfaces- Collection, List, Set, Queue, and Map
+    - key interfaces-> Collection, List, Set, Queue, and Map
     - Collection interface=>
 
 
