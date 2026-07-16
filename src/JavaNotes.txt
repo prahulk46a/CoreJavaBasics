@@ -167,12 +167,31 @@
 # Generics
     - Parameterized types that allow writing code which works with multiple data types using a single class, interface, or method.
     - They improve reusability and ensure type safety at compile time.
+    - Levels of Generics:
+        - Generic Classes: A class that can operate on objects of various types while providing compile-time type safety.
+        - Generic Interfaces: An interface that can be implemented by classes with different data types.
+        - Generic Methods: A method that can operate on different data types, specified at the time of method invocation.
+
+    - Types of Generics:
+        - Bounded Type Parameters: Restricting the types that can be used as arguments for a generic type.
+        - Unbounded (Wildcards ?): Representing an unknown type, allowing for more flexible method parameters.
+        - Type Erasure: The process by which generic type information is removed at runtime, ensuring backward compatibility with non-generic code.
+
     - Benefits of Generics:
         - Type Safety: Ensures that you can only use the specified type, preventing ClassCastException at runtime.
         - Code Reusability: You can write a single class or method that works with different data types.
         - Compile-Time Checking: Errors related to type mismatches are caught at compile time rather than at runtime.
     - Example: class Box<T> { private T content; public void setContent(T content) { this.content = content; } public T getContent() { return content; } }
     - Usecases: Custom Collections, Data repositories, Response wrapper(API responses), Pagination, Optionals, caching, Message Queues, Payment processors.
+    -
+     <?> → "I don't care what type it is."
+     Example: Print any list.
+
+     <? extends T> → "I only want to read T or its children."
+     Example: Calculate total salary, total balance, average marks.
+
+     <? super T> → "I want to add T objects safely."
+     Example: Add customer IDs, insert marks, bulk upload transactions.
 
 # OOP's
     - Encapsulation => 1. Need=> Data hiding, improves security, and ensures controlled access and validations, Better maintainability, loose coupling
