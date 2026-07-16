@@ -183,7 +183,7 @@
         - Compile-Time Checking: Errors related to type mismatches are caught at compile time rather than at runtime.
     - Example: class Box<T> { private T content; public void setContent(T content) { this.content = content; } public T getContent() { return content; } }
     - Usecases: Custom Collections, Data repositories, Response wrapper(API responses), Pagination, Optionals, caching, Message Queues, Payment processors.
-    -
+    - Short Summary of Wildcards:
      <?> → "I don't care what type it is."
      Example: Print any list.
 
@@ -229,9 +229,45 @@
     - Collection interface=>
 
 
-# Exception Handling
+# Exception Handling -> https://medium.com/@anuj.gupta618/mastering-exception-handling-in-java-a-comprehensive-guide-for-beginners-76cbc1e985d9
+- Exception handling in Java is a mechanism that allows developers to handle runtime errors gracefully, ensuring that the program can continue executing or terminate in a controlled manner.
+- It involves the use of try-catch blocks, throw statements, and custom exception classes.
+- Reasons for Exception Handling:
+    1. To prevent program crashes due to unexpected errors.
+    2. To provide meaningful error messages to users or developers.
+        - Instead of displaying 500 Internal Server Error or stack traces, you can catch exceptions and display user-friendly messages or log the errors for debugging purposes.
+    3. To separate error-handling code from regular business logic, improving code readability and maintainability.
+    4. To allow for recovery from errors, enabling the program to continue executing or take corrective actions.
+    5. Convert technical errors into user-friendly responses
+- Types of Exceptions:
+    - Checked Exceptions: These are exceptions that are checked at compile-time. The compiler ensures that these exceptions are either caught or declared in the method signature using the throws keyword. Examples include IOException, SQLException, and ClassNotFoundException.
+    - Unchecked Exceptions: These are exceptions that occur at runtime and are not checked by the compiler. They usually indicate programming errors, such as logic mistakes or improper use of APIs. Examples include NullPointerException, ArrayIndexOutOfBoundsException, and ArithmeticException.
+- Multi-catch Exception => (NullPointerException |ArrayIndexOutOfBoundsException e)
+    - Rules / Best practices =>
+        1. Rule 1: Variable is implicitly final
+           Example-> catch(IOException | SQLException e) {e = new IOException();   // ❌ Compilation Error  }
+        2. Exceptions must not have a parent-child relationship
+        3. Use Multi-Catch only when handling logic is identical
 
 
+       Object
+         ↓
+      Throwable
+         ├──────────────────────┐
+         ↓                      ↓
+      Exception               Error
+         │                      ├── StackOverflowError
+         ├── Checked            ├── VirtualMachineError
+         │   ├── IOException
+         │   ├── SQLException
+         │   └── ClassNotFoundException
+         │
+         └── Unchecked (RuntimeException)
+             ├── ArithmeticException
+             ├── NullPointerException
+             └── IndexOutOfBoundsException
+                 ├── ArrayIndexOutOfBoundsException
+                 └── StringIndexOutOfBoundsException
 
 # Java8+
 
